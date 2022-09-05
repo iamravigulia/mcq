@@ -56,6 +56,10 @@
             <label class="fmt_label" for="">Question</label>
             <input class="fmt_input" type="text" name="question" placeholder="Question" required>
         </div>
+        <div>
+            <label class="fmt_label" for="">hint</label>
+            <input class="fmt_input" type="text" name="hint" placeholder="hint" style="width: 100%;">
+        </div>
         <div class="my-2" style="margin: 20px 0;">
             <label class="bloc" for="">Difficulty Level</label>
             @php $d_levels = DB::table('difficulty_levels')->get(); @endphp
