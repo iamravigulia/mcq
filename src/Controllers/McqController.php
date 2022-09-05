@@ -19,6 +19,7 @@ class McqController extends Controller
         // dd($request->ans_correct1);
         $q = new McqQues();
         $q->question = $request->question;
+        $q->hint = $request->hint;
         $q->difficulty_level_id = $request->difficulty_level_id;
         $q->save();
         /*  */
@@ -271,7 +272,7 @@ class McqController extends Controller
         $q->difficulty_level_id = $request->difficulty_level_id;
         // $q->level_id = $request->question_level;
         // $q->score = $request->question_score;
-        // $q->hint = $request->question_hint;
+        $q->hint = $request->question_hint;
         $q->save();
         $answers = McqAns::where('question_id', $q->id)->get();
         foreach($answers as $ans){
