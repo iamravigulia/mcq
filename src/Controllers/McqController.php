@@ -12,7 +12,7 @@ class McqController extends Controller
     //
     public function test()
     {
-        dd('hello');
+        dd('hello'); 
     }
     public function store(Request $request)
     {
@@ -272,7 +272,7 @@ class McqController extends Controller
         $q->difficulty_level_id = $request->difficulty_level_id;
         // $q->level_id = $request->question_level;
         // $q->score = $request->question_score;
-        $q->hint = $request->question_hint;
+        $q->hint = $request->hint;
         $q->save();
         $answers = McqAns::where('question_id', $q->id)->get();
         foreach($answers as $ans){
